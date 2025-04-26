@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 echo "<h2>Validando conexión a bases de datos...</h2>";
 
 // MySQL con puerto 3306 explícito
-$mysql = mysqli_connect("mysqlprod21.mysql.database.azure.com", "Tiancris", "#Zarache060221", "", 3306);
+$mysql = mysqli_connect("10.161.0.4", "Tiancris", "#Zarache060221", "", 3306);
 
 if ($mysql) {
     echo "<p style='color:green;'>✅ Conexión exitosa a MySQL</p>";
@@ -16,7 +16,7 @@ if ($mysql) {
 }
 
 // PostgreSQL ya especifica puerto 5432 en la cadena
-$conn = pg_connect("host=postprd21.postgres.database.azure.com port=5432 dbname=postgres user=Tiancris password=#Zarache060221 sslmode=require");
+$conn = pg_connect("host=10.161.2.4 port=5432 dbname=postgres user=Tiancris password=#Zarache060221 sslmode=require");
 
 if ($conn) {
     echo "<p style='color:green;'>✅ Conexión exitosa a PostgreSQL</p>";
